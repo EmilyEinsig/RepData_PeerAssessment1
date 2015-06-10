@@ -201,6 +201,8 @@ hr {
 </head>
 
 <body>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+
 <h1>Reproducible Research - Homework #1</h1>
 
 <h2>Loading and preprocessing the data</h2>
@@ -219,7 +221,12 @@ unlink(temp)
 <p>Convert the &#39;date&#39; from characters into POSIXct date format</p>
 
 <pre><code class="r">library(lubridate)
-data$date &lt;- ymd(data$date)
+</code></pre>
+
+<pre><code>## Warning: package &#39;lubridate&#39; was built under R version 3.1.3
+</code></pre>
+
+<pre><code class="r">data$date &lt;- ymd(data$date)
 </code></pre>
 
 <h2>What is mean total number of steps taken per day?</h2>
@@ -227,7 +234,17 @@ data$date &lt;- ymd(data$date)
 <h3>Calculate the total number of steps taken per day</h3>
 
 <pre><code class="r">library(plyr)
-# Remove NA values
+</code></pre>
+
+<pre><code>## 
+## Attaching package: &#39;plyr&#39;
+## 
+## The following object is masked from &#39;package:lubridate&#39;:
+## 
+##     here
+</code></pre>
+
+<pre><code class="r"># Remove NA values
 dat &lt;- data[complete.cases(data),]
 s_d &lt;- ddply(dat,&quot;date&quot;,summarise,sum=sum(steps))
 </code></pre>

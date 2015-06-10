@@ -110,30 +110,3 @@ ggplot(s_m2,aes(interval,avg))+geom_line()+facet_grid(Day~.)+
   xlab("Interval")+ylab("Average # of Steps")+
   ggtitle("Average Number of Steps by 5 min Interval, with NA replacement")
 ```
-=======
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
-
-
-## Loading and preprocessing the data
-
-
-
-## What is mean total number of steps taken per day?
-
-
-
-## What is the average daily activity pattern?
-
-
-
-## Imputing missing values
-
-
-
-## Are there differences in activity patterns between weekdays and weekends?
->>>>>>> 80edf39c3bb508fee88e3394542f967dd3fd3270
