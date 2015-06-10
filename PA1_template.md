@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Reproducible Research - Homework #1
 =======================================
 
@@ -22,13 +21,6 @@ Convert the 'date' from characters into POSIXct date format
 
 ```r
 library(lubridate)
-```
-
-```
-## Warning: package 'lubridate' was built under R version 3.1.3
-```
-
-```r
 data$date <- ymd(data$date)
 ```
 
@@ -39,18 +31,6 @@ data$date <- ymd(data$date)
 
 ```r
 library(plyr)
-```
-
-```
-## 
-## Attaching package: 'plyr'
-## 
-## The following object is masked from 'package:lubridate':
-## 
-##     here
-```
-
-```r
 # Remove NA values
 dat <- data[complete.cases(data),]
 s_d <- ddply(dat,"date",summarise,sum=sum(steps))
